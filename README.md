@@ -30,7 +30,7 @@ Otherwise, it will disappear.
 
 `make` or `make bonus` and then
 
-> ```git clone git@github.com:jijiji-onaka/42_ft_mini_ls_test.git && bash 42_ft_mini_ls_test.git/test.sh```
+> ```git@github.com:jijiji-onaka/42_ft_mini_ls_test.git && bash 42_ft_mini_ls_test.git/test.sh```
 
 これでテストが始まります。
 
