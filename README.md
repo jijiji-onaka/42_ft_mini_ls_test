@@ -2,6 +2,8 @@
 
 ft_mini_lsのテストです。
 
+ft_mini_ls test.
+
 <img width="322" alt="スクリーンショット 2020-12-04 0 53 44" src="https://user-images.githubusercontent.com/60336548/101053470-2b898c80-35cb-11eb-9b1b-68fb68080772.png">
 
 <img width="432" alt="スクリーンショット 2020-12-04 1 32 07" src="https://user-images.githubusercontent.com/60336548/101058605-a903cb80-35d0-11eb-8586-fa750328c1a6.png">
