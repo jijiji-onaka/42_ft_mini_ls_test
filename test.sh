@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 05:31:38 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 05:41:17 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -638,7 +638,7 @@ if test $? -eq 1 ; then
     [Yy])
         echo -e "\033[1m\033[36mOK ."
         echo -en "delete ..."
-        rm -f ./ft_mini_ls > /dev/null
+        make fclean > /dev/null
         sleep 1
         echo -e "\rdeleted bye ...\033[0m"
         exit 0
