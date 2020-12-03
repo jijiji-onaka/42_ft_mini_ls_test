@@ -8,7 +8,9 @@ ft_mini_lsのテストです。
 
 
 ## Installation
-```git clone https://github.com/jijiji-onaka/42_ft_mini_ls_test.git```
+```
+git clone https://github.com/jijiji-onaka/42_ft_mini_ls_test.git
+```
 
 `ft_mini_ls`があるディレクトリでcloneしてください。
 
@@ -31,7 +33,9 @@ Otherwise, it will disappear.
 
 `make` or `make bonus` and then
 
-```bash 42_ft_mini_ls_test.git/test.sh```
+```
+bash 42_ft_mini_ls_test.git/test.sh
+```
 
 これでテストが始まります。
 
@@ -48,7 +52,9 @@ leaksコマンドによるチェックなので`-fsanitize=address`を付けず�
 
 Compile without the `-fsanitize=address` because it is checked by the leaks command.
 
-```bash 42_ft_mini_ls_test.git/leak.sh```
+```
+bash 42_ft_mini_ls_test.git/leak.sh
+```
 
 これでmemory leaksチェックできます。
 
