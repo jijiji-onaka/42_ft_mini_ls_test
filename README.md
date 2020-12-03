@@ -27,11 +27,11 @@ Clone in the directory where `ft_mini_ls` is located.
 
 Now the testing begins.
 
-⚠️
+⚠️　Caution　⚠️
+
 もし遅く感じた場合はtest.shの`sleep 0.2`を全て削除してください。
 
 If you feel it's too slow, delete all the `sleep 0.2` in test.sh.
-⚠️
 
 ### memory leak check
 leaksコマンドによるチェックなので`-fsanitize=address`を付けずにコンパイルしてください。
