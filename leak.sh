@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:29 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/03 20:12:28 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 01:09:50 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ case "$str" in
     echo -e "Start leaks cheak ...\033[0m"
     ;;
   [Nn])
-    echo -e "\033[1m\033[4m\033[36mTo check the leaks you need to run the program in the background .\n\033[0m"
+    echo -e "\033[1m\033[4m\033[36mTo check the memory leaks you need to run the program in the background .\n\033[0m"
     echo -e "\033[1m\033[4m\033[36mAdd the following code to your program . ↓\n\033[0m"
     echo -e "\033[1m__attribute__((destructor))"
     echo -e "\033[1mvoid end()"
