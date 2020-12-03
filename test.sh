@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/03 23:32:50 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 05:31:38 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -366,6 +366,23 @@ else
     echo -e "\033[33m\033[1mOriginal ->\033[0m .TESTAAAAAAAAAAA/real_option_uU_large_r.txt\n"
 fi
 
+# # <option -UuR>
+echo -en "\033[33m[option -UuR]"
+echo -en "\033[0m"
+sleep 0.2
+./ft_mini_ls -UuR > .TESTAAAAAAAAAAA/ft_option_UuR2.txt
+ls -1tr -UuR > .TESTAAAAAAAAAAA/real_option_UuR2.txt
+
+diff .TESTAAAAAAAAAAA/ft_option_UuR2.txt .TESTAAAAAAAAAAA/real_option_UuR2.txt > /dev/null
+if test $? -eq 0 ; then
+    echo -e "\r\033[32m\033[1m[option -UuR] \n\033[0m"
+    rm -f .TESTAAAAAAAAAAA/ft_option_UuR2.txt .TESTAAAAAAAAAAA/real_option_UuR2.txt
+else
+    echo -e "\r\033[31m\033[1m[option -UuR]\033[0m"
+    echo -e "\033[33m\033[1mYours    ->\033[0m .TESTAAAAAAAAAAA/ft_option_UuR2.txt"
+    echo -e "\033[33m\033[1mOriginal ->\033[0m .TESTAAAAAAAAAAA/real_option_UuR2.txt\n"
+fi
+
 # # <option -usS>
 echo -en "\033[33m[option -usS]"
 echo -en "\033[0m"
@@ -570,6 +587,23 @@ else
     echo -e "\033[33m\033[1mOriginal ->\033[0m .TESTAAAAAAAAAAA/real_option_RuUs.txt\n"
 fi
 
+# # <option -UusR>
+echo -en "\033[33m[option -UusR]"
+echo -en "\033[0m"
+sleep 0.2
+./ft_mini_ls -UusR > .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt
+ls -1tr -UusR > .TESTAAAAAAAAAAA/real_option_uUsSR2.txt
+
+diff .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt .TESTAAAAAAAAAAA/real_option_uUsSR2.txt > /dev/null
+if test $? -eq 0 ; then
+    echo -e "\r\033[32m\033[1m[option -UusR] \n\033[0m"
+    rm -f .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt .TESTAAAAAAAAAAA/real_option_uUsSR2.txt
+else
+    echo -e "\r\033[31m\033[1m[option -UusR]\033[0m"
+    echo -e "\033[33m\033[1mYours    ->\033[0m .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt"
+    echo -e "\033[33m\033[1mOriginal ->\033[0m .TESTAAAAAAAAAAA/real_option_uUsSR2.txt\n"
+fi
+
 # # <option -uUsSR>
 echo -en "\033[33m[option -uUsSR]"
 echo -en "\033[0m"
@@ -587,12 +621,37 @@ else
     echo -e "\033[33m\033[1mOriginal ->\033[0m .TESTAAAAAAAAAAA/real_option_uUsSR.txt\n"
 fi
 
+
 # # ---------------------output part------------------------
 
+make clean > /dev/null
 ls .TESTAAAAAAAAAAA | grep "txt"
 if test $? -eq 1 ; then
     echo -e "\n\033[1m\033[36m$USER san .\nPerfectly written .\nIf there are any loopholes in the test cases, I would be grateful if you could tell me about them.\033[0;39m\n"
     rm -rf .TESTAAAAAAAAAAA
+    echo -e "\033[1m\033[4m\033[35mDelete ft_mini_ls? (Y/N)\033[0m"
+    while :
+    do
+    echo -en "\033[1m\033[32mYou : \033[0m"
+    read str
+    case "$str" in
+    [Yy])
+        echo -e "\033[1m\033[36mOK ."
+        echo -en "delete ..."
+        rm -f ./ft_mini_ls > /dev/null
+        sleep 1
+        echo -e "\rdeleted bye ...\033[0m"
+        exit 0
+        ;;
+    [Nn])
+        echo -e "\033[1m\033[36mOK ."
+        echo -e "bye ...\033[0m"
+        exit 0
+        ;;
+    *)
+        echo -e "\033[1m\033[4m\033[35mPlease type Y/y or N/n\033[0m"
+    esac
+    done
 else
     echo -e  "\n\033[1m\033[33m$USER san .\nDiff case found .\nGood luck fixing it .\nThe output results are in the [.TESTAAAAAAAAAAA]\033[0;m\n"
 fi

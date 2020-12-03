@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:29 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 01:09:50 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 05:06:07 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,12 @@
 # define UNDER_LINE \033[4m
 
 echo -e "\033[1m\033[4m\033[36mDoes the program have an infinite loop? (Y/N)\033[0m"
-echo -en "\033[1m\033[32mYou : \033[0m"
 
-read str
-case "$str" in
+while :
+do
+  echo -en "\033[1m\033[32mYou : \033[0m"
+  read str
+  case "$str" in
   [Yy])
     echo -e "\033[1m\033[36mOK ."
     echo -e "Start leaks cheak ...\033[0m"
@@ -44,7 +46,10 @@ case "$str" in
     exit 0
     ;;
   *)
+    echo -e "\033[1m\033[4m\033[36mPlease type Y/y or N/n\033[0m"
 esac
+done
+
 
 
 ./ft_mini_ls $1 > /dev/null &
