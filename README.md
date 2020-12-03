@@ -27,6 +27,12 @@ Clone in the directory where `ft_mini_ls` is located.
 
 Now the testing begins.
 
+⚠️
+もし遅く感じた場合はtest.shの`sleep 0.2`を全て削除してください。
+
+If you feel it's too slow, delete all the `sleep 0.2` in test.sh.
+⚠️
+
 ### memory leak check
 leaksコマンドによるチェックなので`-fsanitize=address`を付けずにコンパイルしてください。
 
@@ -37,6 +43,27 @@ Compile without the `-fsanitize=address` because it is checked by the leaks comm
 これでmemory leaksチェックできます。
 
 Now you can check the memmory leaks.
+
+### Makefile 
+```
+TEST_DIR = ./42_ft_mini_ls_test/
+TEST = $(addprefix $(TEST_DIR), test.sh)
+LEAK = $(addprefix $(TEST_DIR), leak.sh)
+
+test: $(LIBFT) $(BONUS_OBJS)
+	$(CC) -g -fsanitize=address $(CFLAGS) -o $(NAME) $(BONUS_OBJS) $(LIBFT)
+	bash $(TEST)
+	make clean
+
+OP =
+
+leak: bonus
+	bash $(LEAK) $(OP)
+```
+
+このようにMakefileに追加しておくと`make test` `make leak`でテスト出来るようになります。
+
+If you add it to your Makefile, you can use `make test` `make leak` to test it.
 
 ## other
 
