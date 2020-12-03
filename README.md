@@ -22,7 +22,7 @@ Clone in the directory where `ft_mini_ls` is located.
 
 ### diff check
 
-⚠️　Caution　⚠️
+**⚠️　Caution　⚠️**
 
 `.TESTAAAAAAAAAAA`というディレクトリすでにある場合は名前を変更しておいてください。
 でなければ、消えます。
@@ -43,7 +43,7 @@ bash 42_ft_mini_ls_test.git/test.sh
 
 Now the testing begins.
 
-⚠️　Caution　⚠️
+**⚠️　Caution　⚠️**
 
 もし遅く感じた場合はtest.shの`sleep 0.2`を全て削除してください。
 
