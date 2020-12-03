@@ -17,6 +17,15 @@ Clone in the directory where `ft_mini_ls` is located.
 ## Usage
 
 ### diff check
+
+⚠️　Caution　⚠️
+`.TESTAAAAAAAAAAA`というディレクトリすでにある場合は名前を変更しておいてください。
+でなければ、消えます。
+
+If the `.TESTAAAAAAAAAAA` directory already exists, please rename it.
+Otherwise, it will disappear.
+
+
 `make`　または　`make bonus`をしてから
 
 `make` or `make bonus` and then
