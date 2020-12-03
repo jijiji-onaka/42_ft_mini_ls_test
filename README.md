@@ -19,6 +19,7 @@ Clone in the directory where `ft_mini_ls` is located.
 ### diff check
 
 ⚠️　Caution　⚠️
+
 `.TESTAAAAAAAAAAA`というディレクトリすでにある場合は名前を変更しておいてください。
 でなければ、消えます。
 
