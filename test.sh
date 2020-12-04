@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 16:39:12 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 17:41:06 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -628,7 +628,7 @@ ls -G .TESTAAAAAAAAAAA | grep "txt"
 if test $? -eq 1 ; then
     echo -e "\n\033[1m\033[36m$USER san .\nPerfectly written .\nIf there are any loopholes in the test cases, I would be grateful if you could tell me about them.\033[0;39m\n"
     rm -rf .TESTAAAAAAAAAAA
-    echo -e "\033[1m\033[4m\033[35mDelete ft_mini_ls? (Y/N)\033[0m"
+    echo -e "\033[1m\033[4m\033[35mMake fclean? (Y/N)\033[0m"
     while :
     do
     echo -en "\033[1m\033[32mYou : \033[0m"
