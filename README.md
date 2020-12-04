@@ -71,7 +71,6 @@ LEAK = $(addprefix $(TEST_DIR), leak.sh)
 test: $(LIBFT) $(BONUS_OBJS)
 	$(CC) -g -fsanitize=address $(CFLAGS) -o $(NAME) $(BONUS_OBJS) $(LIBFT)
 	bash $(TEST)
-	make clean
 
 OP =
 
