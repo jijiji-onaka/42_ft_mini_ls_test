@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 05:41:17 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 16:04:03 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -200,8 +200,8 @@ fi
 echo -en "\033[33m[option -uR]"
 echo -en "\033[0m"
 sleep 0.2
-./ft_mini_ls -uR > .TESTAAAAAAAAAAA/ft_option_u_large_r.txt
 ls -1tr -uR > .TESTAAAAAAAAAAA/real_option_u_large_r.txt
+./ft_mini_ls -uR > .TESTAAAAAAAAAAA/ft_option_u_large_r.txt
 
 diff .TESTAAAAAAAAAAA/ft_option_u_large_r.txt .TESTAAAAAAAAAAA/real_option_u_large_r.txt > /dev/null
 if test $? -eq 0 ; then
@@ -370,8 +370,8 @@ fi
 echo -en "\033[33m[option -UuR]"
 echo -en "\033[0m"
 sleep 0.2
-./ft_mini_ls -UuR > .TESTAAAAAAAAAAA/ft_option_UuR2.txt
 ls -1tr -UuR > .TESTAAAAAAAAAAA/real_option_UuR2.txt
+./ft_mini_ls -UuR > .TESTAAAAAAAAAAA/ft_option_UuR2.txt
 
 diff .TESTAAAAAAAAAAA/ft_option_UuR2.txt .TESTAAAAAAAAAAA/real_option_UuR2.txt > /dev/null
 if test $? -eq 0 ; then
@@ -404,8 +404,8 @@ fi
 echo -en "\033[33m[option -usR]"
 echo -en "\033[0m"
 sleep 0.2
-./ft_mini_ls -usR > .TESTAAAAAAAAAAA/ft_option_us_large_r.txt
 ls -1tr -usR > .TESTAAAAAAAAAAA/real_option_us_large_r.txt
+./ft_mini_ls -usR > .TESTAAAAAAAAAAA/ft_option_us_large_r.txt
 
 diff .TESTAAAAAAAAAAA/ft_option_us_large_r.txt .TESTAAAAAAAAAAA/real_option_us_large_r.txt > /dev/null
 if test $? -eq 0 ; then
@@ -591,8 +591,8 @@ fi
 echo -en "\033[33m[option -UusR]"
 echo -en "\033[0m"
 sleep 0.2
-./ft_mini_ls -UusR > .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt
 ls -1tr -UusR > .TESTAAAAAAAAAAA/real_option_uUsSR2.txt
+./ft_mini_ls -UusR > .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt
 
 diff .TESTAAAAAAAAAAA/ft_option_uUsSR2.txt .TESTAAAAAAAAAAA/real_option_uUsSR2.txt > /dev/null
 if test $? -eq 0 ; then
@@ -625,7 +625,7 @@ fi
 # # ---------------------output part------------------------
 
 make clean > /dev/null
-ls .TESTAAAAAAAAAAA | grep "txt"
+ls -G .TESTAAAAAAAAAAA | grep "txt"
 if test $? -eq 1 ; then
     echo -e "\n\033[1m\033[36m$USER san .\nPerfectly written .\nIf there are any loopholes in the test cases, I would be grateful if you could tell me about them.\033[0;39m\n"
     rm -rf .TESTAAAAAAAAAAA
