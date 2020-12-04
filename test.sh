@@ -645,7 +645,7 @@ fi
 rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1 tjinichi0 tjinichi2
 rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7 tjinichi6 tjinichi8
 
-ls -G .TESTAAAAAAAAAAA | grep "txt"
+ls -G .TESTAAAAAAAAAAA | grep "txt" > /dev/null
 if test $? -eq 1 ; then
     echo -e "\n\033[1m\033[36m$USER san .\nPerfectly written .\nIf there are any loopholes in the test cases, I would be grateful if you could tell me about them.\033[0;39m\n"
     rm -rf .TESTAAAAAAAAAAA
