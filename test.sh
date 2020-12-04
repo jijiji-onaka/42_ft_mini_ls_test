@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 17:58:57 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 18:04:50 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,16 +30,22 @@ rm -rf .TESTAAAAAAAAAAA
 mkdir .TESTAAAAAAAAAAA
 
 
-rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1
+rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1 tjinichi0 tjinichi2
 mkdir tjinichi1 tjinichi9
-rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7
+rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7 tjinichi6 tjinichi8
 touch tjinichi7 tjinichi5
 
 cp -a tjinichi7 atjinichi7
 cp -a tjinichi7 ztjinichi7
 
+cp -a tjinichi7 tjinichi6
+cp -a tjinichi7 tjinichi8
+
 cp -a tjinichi1 atjinichi1
 cp -a tjinichi1 ztjinichi1
+
+cp -a tjinichi1 tjinichi0
+cp -a tjinichi1 tjinichi2
 
 
 echo -e "\033[32m\033[1m\033[4mgreen -> Success\033[0m"
@@ -636,8 +642,8 @@ fi
 
 # # ---------------------output part------------------------
 
-rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1
-rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7
+rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1 tjinichi0 tjinichi2
+rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7 tjinichi6 tjinichi8
 
 ls -G .TESTAAAAAAAAAAA | grep "txt"
 if test $? -eq 1 ; then
