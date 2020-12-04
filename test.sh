@@ -6,7 +6,7 @@
 #    By: tjinichi <tjinichi@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/03 19:35:22 by tjinichi          #+#    #+#              #
-#    Updated: 2020/12/04 17:41:06 by tjinichi         ###   ########.fr        #
+#    Updated: 2020/12/04 17:58:57 by tjinichi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,20 @@
 # # ---------------------prepare part------------------------
 
 rm -rf .TESTAAAAAAAAAAA
-
 mkdir .TESTAAAAAAAAAAA
+
+
+rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1
+mkdir tjinichi1 tjinichi9
+rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7
+touch tjinichi7 tjinichi5
+
+cp -a tjinichi7 atjinichi7
+cp -a tjinichi7 ztjinichi7
+
+cp -a tjinichi1 atjinichi1
+cp -a tjinichi1 ztjinichi1
+
 
 echo -e "\033[32m\033[1m\033[4mgreen -> Success\033[0m"
 echo -e "\033[31m\033[1m\033[4mred   -> Diff found\033[0m"
@@ -623,6 +635,9 @@ fi
 
 
 # # ---------------------output part------------------------
+
+rm -rf tjinichi1 tjinichi9 atjinichi1 ztjinichi1
+rm -f tjinichi7 tjinichi5 atjinichi7 ztjinichi7
 
 ls -G .TESTAAAAAAAAAAA | grep "txt"
 if test $? -eq 1 ; then
